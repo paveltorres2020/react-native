@@ -2,12 +2,16 @@
 import { SafeAreaView, StyleSheet } from 'react-native';
 import RickAndMortyCharacters from './lib/reckieMartinService';
 
+
 export default function App() {
 
   return (
-    <SafeAreaView style={styles.container}>
-      <RickAndMortyCharacters />
-    </SafeAreaView>
+      <SafeAreaView style={styles.container}>
+       <RickAndMortyCharacters />
+
+     </SafeAreaView> 
+    
+    
   );
 }
 
@@ -24,3 +28,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+ 
