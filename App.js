@@ -1,21 +1,31 @@
 
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import Logo from './assets/logo.svg';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import RickAndMortyCharacters from './lib/reckieMartinService';
+
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <Logo width={700} height={700} />
-    </View>
+      <SafeAreaView style={styles.container}>
+       <RickAndMortyCharacters />
+
+     </SafeAreaView> 
+    
+    
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    paddingTop: 60,
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#f5f5f5',
+  },
+  titulo: {
+    fontSize: 24,
+    fontWeight: 'bold',
   },
 });
+ 
