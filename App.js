@@ -1,31 +1,25 @@
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { SafeAreaView, StyleSheet } from 'react-native';
-import RickAndMortyCharacters from './lib/reckieMartinService';
+import HomeScreen from './screens/HomeScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import RickAndMortyCharacters from './screens/reckieMartinService'; // 👈 NUEVA IMPORTACIÓN
 
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-
   return (
-      <SafeAreaView style={styles.container}>
-       <RickAndMortyCharacters />
-
-     </SafeAreaView> 
-    
-    
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen
+          name="RickAndMorty"
+          component={RickAndMortyCharacters}
+          options={{ title: 'Personajes Rick & Morty' }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 60,
-    alignItems: 'center',
-    backgroundColor: '#f5f5f5',
-  },
-  titulo: {
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
-});
- 
