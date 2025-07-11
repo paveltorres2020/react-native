@@ -10,7 +10,7 @@ export default function App() {
        <RickAndMortyCharacters />
 
      </SafeAreaView> 
-    //pavel torres
+
     
   );
 }
