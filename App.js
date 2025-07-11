@@ -6,7 +6,7 @@ import Logo from './assets/logo.svg';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Logo width={600} height={600} />
+      <Logo width={700} height={700} />
     </View>
   );
 }
